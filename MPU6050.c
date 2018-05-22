@@ -59,7 +59,7 @@ int main(void)
     I2CMasterInitExpClk(I2C2_BASE, g_ui32SysClock, true);
 
     sendByte(0x6B, 0x01);                   //Sai do modo sleep (PWR_MGMT)
-    SysCtlDelay(g_ui32SysClock/12000000);   //Aguarda inicialização
+    SysCtlDelay(g_ui32SysClock/12000000);   //Aguarda inicializaÃ§Ã£o
     sendByte(0x1C, 0x00);                   //ACCEL_CONFIG
     WHO_AM_I = readByte(0x75);
 
